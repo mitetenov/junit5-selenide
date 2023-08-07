@@ -18,6 +18,7 @@ public class SQLTest extends BaseTest {
         trySql.setSQLInput("SELECT * FROM Customers;");
         trySql.runSQLButton.click();
         $(By.xpath("//*[text()='Giovanni Rovelli']/following-sibling::td[text()='Via Ludovico il Moro 22']"))
+                .as("sibling of Giovanni Rovelli")
                 .shouldBe(Condition.visible);
     }
 
